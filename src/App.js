@@ -2,7 +2,9 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Calendar from './components/Calendar';
+import TodoList from './components/TodoList';
 import TodoPage from './components/TodoPage';
+import UserTodoPage from './components/UserTodoPage';
 
 const App = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -16,7 +18,9 @@ const App = () => {
   return (
     <Router>
       <Routes>
+        <Route path="/todo-list" element={<TodoList />} />
         <Route path="/todo-page" element={<TodoPage />} />
+        <Route path="/user-todo/:userId" element={<UserTodoPage />} />
         <Route
           path="/"
           element={

@@ -26,7 +26,7 @@ const Calendar = ({ selectedDate, onDateChange }) => {
     onDateChange(newDate);
 
     // TodoPage로 이동
-    navigate('/todo-page');
+    navigate('/todo-list');
   };
 
   return (
